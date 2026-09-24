@@ -1,0 +1,16 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Verify shell scripts and fixture behavior
+        run: make verify
