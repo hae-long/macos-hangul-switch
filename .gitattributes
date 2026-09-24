@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+*.plist.in text eol=lf
+*.yml text eol=lf
