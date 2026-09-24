@@ -21,15 +21,18 @@ Windows 키보드의 한/영 키를 macOS에서 전역 입력 소스 전환 키�
 
 ## 빠른 설치
 
-저장소를 내려받은 뒤 다음 명령을 실행합니다.
+macOS에 영어(ABC)와 한국어(두벌식) 입력 소스를 먼저 추가합니다. 이 프로젝트는 입력 소스 자체를 설치하지 않습니다.
+
+터미널에서 저장소를 복제하고 설치합니다. 기본 설치에서는 오른쪽 Alt가 기존 Option 기능 대신 한/영 전환 키로 동작합니다.
 
 ```bash
+git clone https://github.com/hae-long/macos-hangul-switch.git
 cd macos-hangul-switch
 ./install.sh
 ./status.sh
 ```
 
-기본 설정은 모든 키보드의 다음 입력을 F18로 변환합니다.
+`./status.sh`로 LaunchAgent, F18 단축키, 키 매핑이 활성 상태인지 확인합니다. 기본 설정은 모든 키보드의 다음 입력을 F18로 변환합니다.
 
 - 전용 한/영 키가 보내는 HID `LANG1`
 - 오른쪽 Alt

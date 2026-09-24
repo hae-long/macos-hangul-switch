@@ -21,15 +21,18 @@ Verified on macOS 26.3.1 Apple Silicon with Sunshine `2026.516.143833` and a Win
 
 ## Quick start
 
-After downloading or cloning the repository:
+First, add English (ABC) and Korean (2-Set) input sources in macOS. This project does not install input sources.
+
+Clone the repository and install it from Terminal. By default, Right Alt switches input sources instead of acting as Option.
 
 ```bash
+git clone https://github.com/hae-long/macos-hangul-switch.git
 cd macos-hangul-switch
 ./install.sh
 ./status.sh
 ```
 
-The default profile maps the global HID `LANG1` and Right Alt inputs to F18. To keep Right Alt as Option and map only a dedicated language key:
+Use `./status.sh` to check that the LaunchAgent, F18 shortcut, and key mappings are active. The default profile maps the global HID `LANG1` and Right Alt inputs to F18. To keep Right Alt as Option and map only a dedicated language key:
 
 ```bash
 ./install.sh --lang1-only
