@@ -1,0 +1,79 @@
+name: Bug report
+description: Report a physical-keyboard or Moonlight Han/Yeong switching problem
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping validate another macOS and keyboard environment.
+        Remove usernames, IP addresses, credentials, certificates, and tokens from all output.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      description: Paste the ProductVersion from `sw_vers`.
+    validations:
+      required: true
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Mac architecture
+      options:
+        - Apple Silicon
+        - Intel
+    validations:
+      required: true
+  - type: input
+    id: keyboard
+    attributes:
+      label: Keyboard and connection
+      description: Include the model and USB, receiver, or Bluetooth connection.
+    validations:
+      required: true
+  - type: dropdown
+    id: path
+    attributes:
+      label: Input path
+      options:
+        - Physical keyboard
+        - Windows Moonlight client
+        - Another Moonlight client
+    validations:
+      required: true
+  - type: input
+    id: sunshine
+    attributes:
+      label: Sunshine version
+      description: Required for Moonlight reports; enter “not used” for local-only reports.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status output
+      description: Paste `./status.sh` output after removing personal paths.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: List the exact keys and applications used.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed credentials, certificates, tokens, IP addresses, and other private data.
+          required: true
